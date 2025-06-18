@@ -15,7 +15,7 @@ import java.math.BigDecimal;
 @SuperBuilder
 @Entity
 @Table(name = "credit_card_tb")
-public class CreditCard {
+public class CreditCard extends BaseEntity{
     @Column(nullable = false, unique = true)
     private String name;
     @Column(nullable = false)
