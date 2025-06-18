@@ -16,8 +16,8 @@ import java.math.BigDecimal;
 @Entity
 @Table(name = "credit_card_tb")
 public class CreditCard {
-    @Column(nullable = false)
-    private  String name;
+    @Column(nullable = false, unique = true)
+    private String name;
     @Column(nullable = false)
     private CardBanner banner;
     @Column(nullable = false)
