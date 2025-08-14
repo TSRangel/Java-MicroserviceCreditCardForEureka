@@ -8,4 +8,5 @@ import java.util.Set;
 public interface CreditCardService {
     CreditCardResponseDTO create(CreditCardRequestDTO dto);
     Set<CreditCardResponseDTO> findCreditCardsByIncomeLessThanEqual(Long value);
+    Set<CreditCardResponseDTO> findAllByClientCardCpf(String cpf);
 }

@@ -35,7 +35,14 @@ public class CreditCardServiceImpl implements CreditCardService {
     @Override
     public Set<CreditCardResponseDTO> findCreditCardsByIncomeLessThanEqual(Long value) {
         BigDecimal income = BigDecimal.valueOf(value);
-        return creditCardRepository.findByIncomeLessThanEqual(income)
+        return creditCardRepository.findByAvailableLimitLessThanEqual(income)
+                .stream().map(creditCardMapper::toDTO)
+                .collect(Collectors.toSet());
+    }
+
+    @Override
+    public  Set<CreditCardResponseDTO> findAllByClientCardCpf(String cpf) {
+        return creditCardRepository.findAllByClientCardCpf(cpf)
                 .stream().map(creditCardMapper::toDTO)
                 .collect(Collectors.toSet());
     }

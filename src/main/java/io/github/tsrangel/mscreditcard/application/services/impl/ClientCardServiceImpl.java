@@ -3,7 +3,6 @@ package io.github.tsrangel.mscreditcard.application.services.impl;
 import io.github.tsrangel.mscreditcard.application.dtos.creditCard.responses.ClientCardResponseDTO;
 import io.github.tsrangel.mscreditcard.application.mappers.ClientCardMapper;
 import io.github.tsrangel.mscreditcard.application.services.ClientCardService;
-import io.github.tsrangel.mscreditcard.domain.entities.ClientCard;
 import io.github.tsrangel.mscreditcard.infra.repositories.ClientCardRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

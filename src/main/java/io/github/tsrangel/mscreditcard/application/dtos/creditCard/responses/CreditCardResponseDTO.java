@@ -10,7 +10,6 @@ public record CreditCardResponseDTO(
         Long id,
         String name,
         CardBanner banner,
-        BigDecimal income,
         BigDecimal availableLimit,
         @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy HH:mm:ss", timezone = "GMT-3")
         LocalDateTime createdAt,

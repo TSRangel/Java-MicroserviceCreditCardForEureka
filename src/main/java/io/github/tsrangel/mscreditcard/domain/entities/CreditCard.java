@@ -21,7 +21,8 @@ public class CreditCard extends BaseEntity{
     @Column(nullable = false)
     private CardBanner banner;
     @Column(nullable = false)
-    private BigDecimal income;
-    @Column(nullable = false)
     private BigDecimal availableLimit;
+    @ManyToOne
+    @JoinColumn(name = "client_card_id", nullable = false, foreignKey = @ForeignKey(name= "fk_credit_card_client_card"))
+    private ClientCard clientCard;
 }

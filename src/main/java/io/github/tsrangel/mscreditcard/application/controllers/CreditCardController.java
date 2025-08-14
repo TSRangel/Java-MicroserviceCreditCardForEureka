@@ -43,7 +43,7 @@ public class CreditCardController {
     }
 
     @GetMapping(params = "cpf")
-    public ResponseEntity<Set<ClientCardResponseDTO>> findCardsByClientCpf(@RequestParam String cpf) {
-        return ResponseEntity.ok().body(clientCardService.findAllByClientCardCpf(cpf));
+    public ResponseEntity<Set<CreditCardResponseDTO>> findCardsByClientCpf(@RequestParam String cpf) {
+        return ResponseEntity.ok().body(creditCardService.findAllByClientCardCpf(cpf));
     }
 }
